@@ -93,14 +93,14 @@
                             d="m23.928 22.275-7.791-7.791A8.919 8.919 0 0 0 18 9a8.946 8.946 0 0 0-2.637-6.363A8.933 8.933 0 0 0 9 0a8.946 8.946 0 0 0-6.363 2.637A8.928 8.928 0 0 0 0 9c0 2.403.939 4.665 2.637 6.363A8.928 8.928 0 0 0 9 18c2.01 0 3.918-.654 5.48-1.86l7.792 7.788a.246.246 0 0 0 .348 0l1.308-1.305a.246.246 0 0 0 0-.348Zm-10.176-8.523A6.684 6.684 0 0 1 9 15.72a6.684 6.684 0 0 1-4.752-1.968A6.684 6.684 0 0 1 2.28 9c0-1.794.699-3.483 1.968-4.752A6.684 6.684 0 0 1 9 2.28c1.794 0 3.483.696 4.752 1.968A6.684 6.684 0 0 1 15.72 9a6.678 6.678 0 0 1-1.968 4.752Z" />
                     </svg>
                     <input
-                        class=" bg-transparent placeholder-gray-800  md:mx-3 lg:mx-0 placeholder-opacity-100 ww:h-6 md:h-3  focus:border-none outline-offset-0 ring-offset-0 ring-0  focus:outline-none outline-none border-none text-zinc-800 ww:text-base md:text-[15px] font-semibold max-w-32 bg-fuchsia-700/ "
+                        id="searchInput" class=" bg-transparent placeholder-gray-800  md:mx-3 lg:mx-0 placeholder-opacity-100 ww:h-6 md:h-3  focus:border-none outline-offset-0 ring-offset-0 ring-0  focus:outline-none outline-none border-none text-zinc-800 ww:text-base md:text-[15px] font-semibold max-w-32 bg-fuchsia-700/ "
                         type="text" placeholder="Search">
                 </div>
                 <a class=" w-full ml-14  text-left md:text-[15px] ww:text-base text-[#0DA8CA] mt-3 " href="#">Clear
                     All</a>
 
                 <!-- categories -->
-                <div :class=" categoryTab ? '  '  :  ' ' " x-data="{ categoryTab : true }" class="  mt-12 w-[80%]  ">
+                <div id="categories"  :class=" categoryTab ? '  '  :  ' ' " x-data="{ categoryTab : true }" class="  mt-12 w-[80%]    ">
                     <!-- header -->
                     <div @click=" categoryTab = !categoryTab "
                         class="  cursor-pointer flex items-center  justify-between w-full bg-red-400/ ">
@@ -118,24 +118,24 @@
                         <div class=" flex flex-col items-start justify-center bg-yellow-400/ py-3 ">
                             <li class=" flex justify-start items-center w-40 h-5 bg-fuchsia-700/ my-3 ml-1 ">
                                 <input
-                                    class=" form-checkbox cursor-pointer focus:ring-zinc-700 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                    class=" cursor-pointer focus:ring-zinc-700 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                     type="checkbox" name="brand" id="baked-goods">
                                 <span class=" font-semibold md:text-sm ww:text-[15px] text-textF ml-4 ">Baked Goods
                                     (8)</span>
                             </li>
                             <li class=" flex justify-start items-center w-40 h-5 bg-fuchsia-700/ my-3 ml-1 ">
                                 <input
-                                    class=" form-checkbox cursor-pointer focus:ring-zinc-700 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                    class=" cursor-pointer focus:ring-zinc-700 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                     type="checkbox" name="brand" id="coffee">
                                 <span class=" font-semibold md:text-sm ww:text-[15px] text-textF ml-4 ">Coffee
-                                    (2)</span>
+                                    (5)</span>
                             </li>
                         </div>
                     </div>
                 </div>
 
                 <!-- dietary -->
-                <div :class=" dietaryTab ? '  '  :  ' ' " x-data="{ dietaryTab : true }" class="  mt-12 w-[80%]  ">
+                <div id="dietary" :class=" dietaryTab ? '  '  :  ' ' " x-data="{ dietaryTab : true }" class="  mt-12 w-[80%]  ">
                     <!-- header -->
                     <div @click=" dietaryTab = !dietaryTab "
                         class="  cursor-pointer flex items-center  justify-between w-full bg-red-400/ ">
@@ -152,22 +152,22 @@
                         x-transition:enter.duration.200ms x-transition:leave.duration.200ms>
                         <div class=" flex flex-col items-start justify-center bg-yellow-400/ py-3 ">
                             <li class=" flex justify-start items-center w-40 h-5 bg-fuchsia-700/ my-3 ml-1 ">
-                                <input
-                                    class=" form-checkbox cursor-pointer focus:ring-zinc-700 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                <input 
+                                    class=" cursor-pointer focus:ring-zinc-700 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                     type="checkbox" name="brand" id="eco-friendly">
                                 <span class=" font-semibold md:text-sm ww:text-[15px] text-textF ml-4 ">Eco Friendly
                                     (2)</span>
                             </li>
                             <li class=" flex justify-start items-center w-40 h-5 bg-fuchsia-700/ my-3 ml-1 ">
                                 <input
-                                    class=" form-checkbox cursor-pointer focus:ring-zinc-700 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                    class=" cursor-pointer focus:ring-zinc-700 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                     type="checkbox" name="brand" id="gluten-free">
                                 <span class=" font-semibold md:text-sm ww:text-[15px] text-textF ml-4 ">Gluten Free
                                     (4)</span>
                             </li>
                             <li class=" flex justify-start items-center w-40 h-5 bg-fuchsia-700/ my-3 ml-1 ">
                                 <input
-                                    class=" form-checkbox cursor-pointer focus:ring-zinc-700 border-1.5 border-gray-800 rounded-md w-5 h-5 "
+                                    class=" cursor-pointer focus:ring-zinc-700 border-1.5 border-gray-800 rounded-md w-5 h-5 "
                                     type="checkbox" name="brand" id="nut-free">
                                 <span class=" font-semibold md:text-sm ww:text-[15px] text-textF ml-4 ">Nut Free
                                     (7)</span>
@@ -194,7 +194,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        <div id="menu-list" x-show="isOpen"
+                        <div id="sort-list" x-show="isOpen"
                             class="bg-white  mt-4 rounded-md  border border-gray-200  absolute -top-5 right-0 z-40   ">
                             <a @click="isOpen = !isOpen" data-theme="light" href="#"
                                 class=" theme-switcher block text-gray-700  text-[14px] font-normal  hover:bg-gray-200/80 text-center px-5 py-2 ">Bestselling</a>
@@ -209,10 +209,9 @@
                 </section>
                 <!-- products seciton -->
                 <section
-                    class=" dd:col-span-12   grid lg:col-span-9  ww:col-span-9 dd:grid-cols-1 ss:grid-cols-2 dd:gap-x-14 dd:gap-y-6 md:gap-x-7 md:gap-y-6 ww:grid-cols-3 lg:gap-x-14  ww:gap-x-10  lg:gap-y-7 my-5 px-7 ">
-                    <div
+                    id="product-section" class="  dd:col-span-12   grid lg:col-span-9  ww:col-span-9 dd:grid-cols-1 ss:grid-cols-2 dd:gap-x-14 dd:gap-y-6 md:gap-x-7 md:gap-y-6 ww:grid-cols-3 lg:gap-x-14  ww:gap-x-10  lg:gap-y-7 my-5 px-7 ">
+                    <!-- <div
                         class="  bg-slate-200/ relative rounded-xl  ww:h-[330px] flex  flex-col  border-zinc-200 border-[1px]  ">
-                        <!-- like product button -->
                         <div
                             class=" w-7 h-7 bg-red-50 z-20  rounded-full absolute top-4 right-4 flex items-center justify-center cursor-pointer ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none">
@@ -220,203 +219,16 @@
                                     d="m10 3.396-.845-.869a4.43 4.43 0 0 0-6.938 1.228c-.616 1.206-.756 2.948.37 5.171 1.085 2.141 3.342 4.7 7.413 7.5 4.071-2.793 6.327-5.356 7.413-7.5 1.126-2.224.988-3.965.37-5.171a4.43 4.43 0 0 0-6.937-1.23L10 3.396Zm0 14.449C-8.082 5.896 4.432-3.43 9.793 1.503c.071.065.14.132.208.2a7.54 7.54 0 0 1 .208-.2C15.566-3.432 28.082 5.894 10 17.844v.001Z"
                                     clip-rule="evenodd" /></svg>
                         </div>
-                        <!-- product image -->
                         <img class="  rounded-t-md w-full " src="/assets/images/Cappuccino.png" alt="Cappuccino">
-                        <!-- product info -->
                         <div class=" ww:h-[118px] lg:h-[135px]  bg-red-200/   pl-5  ">
                             <h1 class=" font-bold block mt-3 ">Cappuccino</h1>
-                            <!-- store profile -->
                             <div class=" mt-4 flex items-center bg-gray-300/  ">
                                 <img class=" w-7 h-7 " src="/assets/images/Photo.png" alt="store-profile">
                                 <span class=" font-medium text-sm ml-3 ">Minden Bakery</span>
                             </div>
                             <p class=" py-3 text-sm ">8$</p>
                         </div>
-                    </div>
-                    <div
-                        class="  bg-slate-200/ relative rounded-xl  ww:h-[330px] flex  flex-col  border-zinc-200 border-[1px]  ">
-                        <!-- like product button -->
-                        <div
-                            class=" w-7 h-7 bg-red-50 z-20  rounded-full absolute top-4 right-4 flex items-center justify-center cursor-pointer ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none">
-                                <path fill="#F56969" fill-rule="evenodd"
-                                    d="m10 3.396-.845-.869a4.43 4.43 0 0 0-6.938 1.228c-.616 1.206-.756 2.948.37 5.171 1.085 2.141 3.342 4.7 7.413 7.5 4.071-2.793 6.327-5.356 7.413-7.5 1.126-2.224.988-3.965.37-5.171a4.43 4.43 0 0 0-6.937-1.23L10 3.396Zm0 14.449C-8.082 5.896 4.432-3.43 9.793 1.503c.071.065.14.132.208.2a7.54 7.54 0 0 1 .208-.2C15.566-3.432 28.082 5.894 10 17.844v.001Z"
-                                    clip-rule="evenodd" /></svg>
-                        </div>
-                        <!-- product image -->
-                        <img class="  rounded-t-md w-full " src="/assets/images/Matcha Latte.png" alt="">
-                        <!-- product info -->
-                        <div class=" ww:h-[118px] lg:h-[135px]  bg-red-200/   pl-5  ">
-                            <h1 class=" font-bold block mt-3 ">Matcha Latte</h1>
-                            <!-- store profile -->
-                            <div class=" mt-4 flex items-center bg-gray-300/  ">
-                                <img class=" w-7 h-7 " src="/assets/images/Photo.png" alt="store-profile">
-                                <span class=" font-medium text-sm ml-3 ">Minden Bakery</span>
-                            </div>
-                            <p class=" py-3 text-sm ">8$</p>
-                        </div>
-                    </div>
-                    <div
-                        class="  bg-slate-200/ relative rounded-xl  ww:h-[330px] flex  flex-col  border-zinc-200 border-[1px]  ">
-                        <!-- like product button -->
-                        <div
-                            class=" w-7 h-7 bg-red-50 z-20  rounded-full absolute top-4 right-4 flex items-center justify-center cursor-pointer ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none">
-                                <path fill="#F56969" fill-rule="evenodd"
-                                    d="m10 3.396-.845-.869a4.43 4.43 0 0 0-6.938 1.228c-.616 1.206-.756 2.948.37 5.171 1.085 2.141 3.342 4.7 7.413 7.5 4.071-2.793 6.327-5.356 7.413-7.5 1.126-2.224.988-3.965.37-5.171a4.43 4.43 0 0 0-6.937-1.23L10 3.396Zm0 14.449C-8.082 5.896 4.432-3.43 9.793 1.503c.071.065.14.132.208.2a7.54 7.54 0 0 1 .208-.2C15.566-3.432 28.082 5.894 10 17.844v.001Z"
-                                    clip-rule="evenodd" /></svg>
-                        </div>
-                        <!-- product image -->
-                        <img class="  rounded-t-md w-full " src="/assets/images/Golden Latte.png" alt="">
-                        <!-- product info -->
-                        <div class=" ww:h-[118px] lg:h-[135px]  bg-red-200/   pl-5  ">
-                            <h1 class=" font-bold block mt-3 ">Golden Latte</h1>
-                            <!-- store profile -->
-                            <div class=" mt-4 flex items-center bg-gray-300/  ">
-                                <img class=" w-7 h-7 " src="/assets/images/Photo.png" alt="store-profile">
-                                <span class=" font-medium text-sm ml-3 ">Minden Bakery</span>
-                            </div>
-                            <p class=" py-3 text-sm ">8$</p>
-                        </div>
-                    </div>
-                    <div
-                        class="  bg-slate-200/ relative rounded-xl  ww:h-[330px] flex  flex-col  border-zinc-200 border-[1px]  ">
-                        <!-- like product button -->
-                        <div
-                            class=" w-7 h-7 bg-red-50 z-20  rounded-full absolute top-4 right-4 flex items-center justify-center cursor-pointer ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none">
-                                <path fill="#F56969" fill-rule="evenodd"
-                                    d="m10 3.396-.845-.869a4.43 4.43 0 0 0-6.938 1.228c-.616 1.206-.756 2.948.37 5.171 1.085 2.141 3.342 4.7 7.413 7.5 4.071-2.793 6.327-5.356 7.413-7.5 1.126-2.224.988-3.965.37-5.171a4.43 4.43 0 0 0-6.937-1.23L10 3.396Zm0 14.449C-8.082 5.896 4.432-3.43 9.793 1.503c.071.065.14.132.208.2a7.54 7.54 0 0 1 .208-.2C15.566-3.432 28.082 5.894 10 17.844v.001Z"
-                                    clip-rule="evenodd" /></svg>
-                        </div>
-                        <!-- product image -->
-                        <img class="  rounded-t-md w-full " src="/assets/images/Hot Chocolate.png" alt="">
-                        <!-- product info -->
-                        <div class=" ww:h-[118px] lg:h-[135px]  bg-red-200/   pl-5  ">
-                            <h1 class=" font-bold block mt-3 ">Hot Chocolate</h1>
-                            <!-- store profile -->
-                            <div class=" mt-4 flex items-center bg-gray-300/  ">
-                                <img class=" w-7 h-7 " src="/assets/images/Photo.png" alt="store-profile">
-                                <span class=" font-medium text-sm ml-3 ">Minden Bakery</span>
-                            </div>
-                            <p class=" py-3 text-sm ">8$</p>
-                        </div>
-                    </div>
-                    <div
-                        class="  bg-slate-200/ relative rounded-xl  ww:h-[330px] flex  flex-col  border-zinc-200 border-[1px]  ">
-                        <!-- like product button -->
-                        <div
-                            class=" w-7 h-7 bg-red-50 z-20  rounded-full absolute top-4 right-4 flex items-center justify-center cursor-pointer ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none">
-                                <path fill="#F56969" fill-rule="evenodd"
-                                    d="m10 3.396-.845-.869a4.43 4.43 0 0 0-6.938 1.228c-.616 1.206-.756 2.948.37 5.171 1.085 2.141 3.342 4.7 7.413 7.5 4.071-2.793 6.327-5.356 7.413-7.5 1.126-2.224.988-3.965.37-5.171a4.43 4.43 0 0 0-6.937-1.23L10 3.396Zm0 14.449C-8.082 5.896 4.432-3.43 9.793 1.503c.071.065.14.132.208.2a7.54 7.54 0 0 1 .208-.2C15.566-3.432 28.082 5.894 10 17.844v.001Z"
-                                    clip-rule="evenodd" /></svg>
-                        </div>
-                        <!-- product image -->
-                        <img class="  rounded-t-md w-full " src="/assets/images/Iced Latte.png" alt="">
-                        <!-- product info -->
-                        <div class=" ww:h-[118px] lg:h-[135px]  bg-red-200/   pl-5  ">
-                            <h1 class=" font-bold block mt-3 ">Iced Latte</h1>
-                            <!-- store profile -->
-                            <div class=" mt-4 flex items-center bg-gray-300/  ">
-                                <img class=" w-7 h-7 " src="/assets/images/Photo.png" alt="store-profile">
-                                <span class=" font-medium text-sm ml-3 ">Minden Bakery</span>
-                            </div>
-                            <p class=" py-3 text-sm ">8$</p>
-                        </div>
-                    </div>
-                    <div
-                        class="  bg-slate-200/ relative rounded-xl  ww:h-[330px] flex  flex-col  border-zinc-200 border-[1px]  ">
-                        <!-- like product button -->
-                        <div
-                            class=" w-7 h-7 bg-red-50 z-20  rounded-full absolute top-4 right-4 flex items-center justify-center cursor-pointer ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none">
-                                <path fill="#F56969" fill-rule="evenodd"
-                                    d="m10 3.396-.845-.869a4.43 4.43 0 0 0-6.938 1.228c-.616 1.206-.756 2.948.37 5.171 1.085 2.141 3.342 4.7 7.413 7.5 4.071-2.793 6.327-5.356 7.413-7.5 1.126-2.224.988-3.965.37-5.171a4.43 4.43 0 0 0-6.937-1.23L10 3.396Zm0 14.449C-8.082 5.896 4.432-3.43 9.793 1.503c.071.065.14.132.208.2a7.54 7.54 0 0 1 .208-.2C15.566-3.432 28.082 5.894 10 17.844v.001Z"
-                                    clip-rule="evenodd" /></svg>
-                        </div>
-                        <!-- product image -->
-                        <img class="  rounded-t-md w-full " src="/assets/images/Plain Croissant.png" alt="">
-                        <!-- product info -->
-                        <div class=" ww:h-[118px] lg:h-[135px]  bg-red-200/   pl-5  ">
-                            <h1 class=" font-bold block mt-3 ">Plain Croissant</h1>
-                            <!-- store profile -->
-                            <div class=" mt-4 flex items-center bg-gray-300/  ">
-                                <img class=" w-7 h-7 " src="/assets/images/Photo.png" alt="store-profile">
-                                <span class=" font-medium text-sm ml-3 ">Minden Bakery</span>
-                            </div>
-                            <p class=" py-3 text-sm ">8$</p>
-                        </div>
-                    </div>
-                    <div
-                        class="  bg-slate-200/ relative rounded-xl  ww:h-[330px] flex  flex-col  border-zinc-200 border-[1px]  ">
-                        <!-- like product button -->
-                        <div
-                            class=" w-7 h-7 bg-red-50 z-20  rounded-full absolute top-4 right-4 flex items-center justify-center cursor-pointer ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none">
-                                <path fill="#F56969" fill-rule="evenodd"
-                                    d="m10 3.396-.845-.869a4.43 4.43 0 0 0-6.938 1.228c-.616 1.206-.756 2.948.37 5.171 1.085 2.141 3.342 4.7 7.413 7.5 4.071-2.793 6.327-5.356 7.413-7.5 1.126-2.224.988-3.965.37-5.171a4.43 4.43 0 0 0-6.937-1.23L10 3.396Zm0 14.449C-8.082 5.896 4.432-3.43 9.793 1.503c.071.065.14.132.208.2a7.54 7.54 0 0 1 .208-.2C15.566-3.432 28.082 5.894 10 17.844v.001Z"
-                                    clip-rule="evenodd" /></svg>
-                        </div>
-                        <!-- product image -->
-                        <img class="  rounded-t-md w-full " src="/assets/images/French Macaron.png" alt="">
-                        <!-- product info -->
-                        <div class=" ww:h-[118px] lg:h-[135px]  bg-red-200/   pl-5  ">
-                            <h1 class=" font-bold block mt-3 ">French Macaron</h1>
-                            <!-- store profile -->
-                            <div class=" mt-4 flex items-center bg-gray-300/  ">
-                                <img class=" w-7 h-7 " src="/assets/images/Photo.png" alt="store-profile">
-                                <span class=" font-medium text-sm ml-3 ">Minden Bakery</span>
-                            </div>
-                            <p class=" py-3 text-sm ">8$</p>
-                        </div>
-                    </div>
-                    <div
-                        class="  bg-slate-200/ relative rounded-xl  ww:h-[330px] flex  flex-col  border-zinc-200 border-[1px]  ">
-                        <!-- like product button -->
-                        <div
-                            class=" w-7 h-7 bg-red-50 z-20  rounded-full absolute top-4 right-4 flex items-center justify-center cursor-pointer ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none">
-                                <path fill="#F56969" fill-rule="evenodd"
-                                    d="m10 3.396-.845-.869a4.43 4.43 0 0 0-6.938 1.228c-.616 1.206-.756 2.948.37 5.171 1.085 2.141 3.342 4.7 7.413 7.5 4.071-2.793 6.327-5.356 7.413-7.5 1.126-2.224.988-3.965.37-5.171a4.43 4.43 0 0 0-6.937-1.23L10 3.396Zm0 14.449C-8.082 5.896 4.432-3.43 9.793 1.503c.071.065.14.132.208.2a7.54 7.54 0 0 1 .208-.2C15.566-3.432 28.082 5.894 10 17.844v.001Z"
-                                    clip-rule="evenodd" /></svg>
-                        </div>
-                        <!-- product image -->
-                        <img class="  rounded-t-md w-full " src="/assets/images/Original Blend Coffee.png" alt="">
-                        <!-- product info -->
-                        <div class=" ww:h-[118px] lg:h-[135px]  bg-red-200/   pl-5  ">
-                            <h1 class=" font-bold block mt-3 ">Original Blend Coffee</h1>
-                            <!-- store profile -->
-                            <div class=" mt-4 flex items-center bg-gray-300/  ">
-                                <img class=" w-7 h-7 " src="/assets/images/Photo.png" alt="store-profile">
-                                <span class=" font-medium text-sm ml-3 ">Minden Bakery</span>
-                            </div>
-                            <p class=" py-3 text-sm ">8$</p>
-                        </div>
-                    </div>
-                    <div
-                        class="  bg-slate-200/ relative rounded-xl  ww:h-[330px] flex  flex-col  border-zinc-200 border-[1px]  ">
-                        <!-- like product button -->
-                        <div
-                            class=" w-7 h-7 bg-red-50 z-20  rounded-full absolute top-4 right-4 flex items-center justify-center cursor-pointer ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none">
-                                <path fill="#F56969" fill-rule="evenodd"
-                                    d="m10 3.396-.845-.869a4.43 4.43 0 0 0-6.938 1.228c-.616 1.206-.756 2.948.37 5.171 1.085 2.141 3.342 4.7 7.413 7.5 4.071-2.793 6.327-5.356 7.413-7.5 1.126-2.224.988-3.965.37-5.171a4.43 4.43 0 0 0-6.937-1.23L10 3.396Zm0 14.449C-8.082 5.896 4.432-3.43 9.793 1.503c.071.065.14.132.208.2a7.54 7.54 0 0 1 .208-.2C15.566-3.432 28.082 5.894 10 17.844v.001Z"
-                                    clip-rule="evenodd" /></svg>
-                        </div>
-                        <!-- product image -->
-                        <img class="  rounded-t-md w-full " src="/assets/images/Energy Cookie.png" alt="">
-                        <!-- product info -->
-                        <div class=" ww:h-[118px] lg:h-[135px]  bg-red-200/   pl-5  ">
-                            <h1 class=" font-bold block mt-3 ">Energy Cookie</h1>
-                            <!-- store profile -->
-                            <div class=" mt-4 flex items-center bg-gray-300/  ">
-                                <img class=" w-7 h-7 " src="/assets/images/Photo.png" alt="store-profile">
-                                <span class=" font-medium text-sm ml-3 ">Minden Bakery</span>
-                            </div>
-                            <p class=" py-3 text-sm ">8$</p>
-                        </div>
-                    </div>
+                    </div>  -->
                 </section>
             </section>
 
